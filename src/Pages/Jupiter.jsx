@@ -6,7 +6,7 @@ import Internal from "../assets/Images/Jupiter/JupiterInternal.png";
 import Surface from "../assets/Images/Jupiter/JupiterSurface.png";
 
 function Jupiter() {
-  const [mainColor, SetMainColor] = useState("rgba(209,76,50,1)");
+  const [mainColor, SetMainColor] = useState("rgba(65,158,187,1)");
 
   const [data, setData] = useState([]);
 
@@ -28,11 +28,11 @@ function Jupiter() {
         DescriptionTwo={planet?.overview.content}
         DescriptionThree={planet?.structure.content}
         PlanetImg={JupiterImg}
+        Wiki={planet?.geology.source}
         InternalImg={Internal}
         GeologyImg={Surface}
         PlanetWidth={"582px"}
         InternalHeight={"572px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

@@ -29,10 +29,10 @@ function Neptune() {
         DescriptionThree={planet?.structure.content}
         PlanetImg={NeptuneImg}
         InternalImg={Internal}
+        Wiki={planet?.geology.source}
         GeologyImg={Surface}
         PlanetWidth={"450px"}
         InternalHeight={"436px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

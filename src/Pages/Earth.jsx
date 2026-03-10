@@ -27,12 +27,12 @@ function Earth() {
         Description={planet?.geology.content}
         DescriptionTwo={planet?.overview.content}
         DescriptionThree={planet?.structure.content}
+        Wiki={planet?.geology.source}
         PlanetImg={EarthImg}
         InternalImg={Internal}
         GeologyImg={Surface}
         PlanetWidth={"450px"}
         InternalHeight={"436px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

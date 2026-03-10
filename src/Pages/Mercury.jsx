@@ -28,11 +28,11 @@ function Mercury() {
         DescriptionTwo={planet?.overview.content}
         DescriptionThree={planet?.structure.content}
         PlanetImg={MercuryImg}
+        Wiki={planet?.geology.source}
         InternalImg={Internal}
         GeologyImg={Surface}
         PlanetWidth={"290px"}
         InternalHeight={"278px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

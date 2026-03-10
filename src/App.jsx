@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router";
 import "./App.css";
 import Mercury from "./Pages/Mercury";
 import Venus from "./Pages/Venus";

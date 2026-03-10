@@ -30,9 +30,9 @@ function Saturn() {
         PlanetImg={SaturnImg}
         InternalImg={Internal}
         GeologyImg={Surface}
-        PlanetWidth={"416px"}
+        Wiki={planet?.geology.source}
+        PlanetWidth={"216px"}
         InternalHeight={"416px"}
-        SaturnOvalDisplay={"block"}
       />
     </>
   );

@@ -30,9 +30,9 @@ function Uranus() {
         PlanetImg={UranusImg}
         InternalImg={Internal}
         GeologyImg={Surface}
+        Wiki={planet?.geology.source}
         PlanetWidth={"458px"}
         InternalHeight={"458px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

@@ -29,10 +29,10 @@ function Venus() {
         DescriptionThree={planet?.structure.content}
         PlanetImg={VenusImg}
         InternalImg={Internal}
+        Wiki={planet?.geology.source}
         GeologyImg={Surface}
         PlanetWidth={"400px"}
         InternalHeight={"386px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );

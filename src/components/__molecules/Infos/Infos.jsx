@@ -14,47 +14,58 @@ function Infos({
   visibilityOne,
   visibilityTwo,
   visibilityThree,
+  Wiki,
 }) {
   return (
     <>
-      <div className="flex flex-col gap-[30px] text-white w-[350px] relative">
-        <h1 className="font-[400] text-[80px] uppercase">{Name}</h1>
-        <div className="h-[120px] w-[350px]">
-          <span
-            style={{
-              opacity: visibilityOne,
-              position: "absolute",
-            }}
-          >
-            {Description}
-          </span>
-          <span
-            style={{
-              opacity: visibilityTwo,
-              position: "absolute",
-            }}
-          >
-            {DescriptionTwo}
-          </span>
-          <span
-            style={{
-              opacity: visibilityThree,
-              position: "absolute",
-            }}
-          >
-            {DescriptionThree}
-          </span>
+      <div className="flex flex-col gap-[120px] text-white  relative max-md:flex-row max-md:w-full p-[20px] max-md:gap-[35px] max-[600px]:items-center max-[600px]:justify-center">
+        <div className="flex flex-col gap-[30px] max-w-[350px] max-md:w-full max-[600px]:items-center max-[600px]:justify-center">
+          <h1 className="font-[400] text-[80px] uppercase">{Name}</h1>
+          <div className="h-[150px] w-[350px] max-md:w-full max-[600px]:justify-center max-[600px]:flex  max-[600px]:text-center">
+            <span
+              className="absolute w-[350px] max-md:w-[280px]"
+              style={{
+                opacity: visibilityOne,
+              }}
+            >
+              {Description}
+            </span>
+            <span
+              className="absolute  w-[350px] max-md:w-[280px]"
+              style={{
+                opacity: visibilityTwo,
+              }}
+            >
+              {DescriptionTwo}
+            </span>
+            <span
+              className="absolute w-[350px] max-md:w-[280px]"
+              style={{
+                opacity: visibilityThree,
+              }}
+            >
+              {DescriptionThree}
+            </span>
+          </div>
+          <a href={Wiki} className="flex gap-2 opacity-50">
+            <span className="font-[400] text-[12px]">
+              Source: <span className="font-[700] text-[15px]">Wikipedia</span>
+            </span>
+            <img className="size-[16px]" src={Arrow} />
+          </a>
         </div>
-        <div className="flex gap-2 opacity-50">
-          <span>Source: Wikipedia</span>
-          <img src={Arrow} />
+
+        <div className="max-[600px]:hidden flex max-md:items-end w-full">
+          <Categories
+            MainColor={MainColor}
+            OnClickOne={OnClickOne}
+            OnClickTwo={OnClickTwo}
+            OnClickThree={OnClickThree}
+            TextOne={"OVERVIEW"}
+            TextTwo={"INTERNAL STRUCTURE"}
+            TextThree={"SURFACE GEOLOGY"}
+          />
         </div>
-        <Categories
-          MainColor={MainColor}
-          OnClickOne={OnClickOne}
-          OnClickTwo={OnClickTwo}
-          OnClickThree={OnClickThree}
-        />
       </div>
     </>
   );

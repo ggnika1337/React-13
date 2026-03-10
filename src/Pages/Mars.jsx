@@ -28,11 +28,11 @@ function Mars() {
         DescriptionTwo={planet?.overview.content}
         DescriptionThree={planet?.structure.content}
         PlanetImg={MarsImg}
+        Wiki={planet?.geology.source}
         InternalImg={Internal}
         GeologyImg={Surface}
         PlanetWidth={"336px"}
         InternalHeight={"322px"}
-        SaturnOvalDisplay={"none"}
       />
     </>
   );
