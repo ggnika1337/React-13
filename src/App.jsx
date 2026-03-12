@@ -9,6 +9,7 @@ import Jupiter from "./Pages/Jupiter";
 import Saturn from "./Pages/Saturn";
 import Uranus from "./Pages/Uranus";
 import Neptune from "./Pages/Neptune";
+// import { HashRouter } from "react-router-dom";
 
 function App() {
   return (

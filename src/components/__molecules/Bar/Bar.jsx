@@ -27,8 +27,9 @@ function Bar({
       <div className="w-full border-b border-b-[rgba(255,255,255,0.2)] max-[600px]:h-[68px] z-30 fixed">
         <div className="justify-self-center w-full max-w-[1440px] h-[85px]  p-[25px] text-white flex justify-between items-center top-0 left-0 whitespace-nowrap max-md:h-[160px] max-md:flex-col">
           <h1 className="tracking-[-1px] font-[800] text-[28px] max-[600px]:absolute max-[600px]:left-[24px] max-[600px]:top-[12px]">
-            THE PLANETS
+            <Link to={"/Mercury"}>THE PLANETS</Link>
           </h1>
+
           <Transfers
             MercuryClick={MercuryClick}
             VenusClick={VenusClick}
