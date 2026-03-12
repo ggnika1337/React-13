@@ -18,10 +18,12 @@ function Infos({
 }) {
   return (
     <>
-      <div className="flex flex-col gap-[120px] text-white  relative max-md:flex-row max-md:w-full p-[20px] max-md:gap-[35px] max-[600px]:items-center max-[600px]:justify-center">
-        <div className="flex flex-col gap-[30px] max-w-[350px] max-md:w-full max-[600px]:items-center max-[600px]:justify-center">
-          <h1 className="font-[400] text-[80px] uppercase">{Name}</h1>
-          <div className="h-[150px] w-[350px] max-md:w-full max-[600px]:justify-center max-[600px]:flex  max-[600px]:text-center">
+      <div className="flex flex-col gap-[20px] text-white  relative max-md:flex-row max-md:w-full px-[20px] pb-[10px] max-md:gap-[35px] max-[600px]:items-center max-[600px]:justify-center">
+        <div className="flex flex-col gap-[20px] max-w-[350px] max-md:w-full max-[600px]:items-center max-[600px]:justify-center max-md:gap-[10px]">
+          <h1 className="font-[400] text-[80px] uppercase max-md:text-[30px]">
+            {Name}
+          </h1>
+          <div className="text-[13px] h-[100px] w-[350px] max-md:w-full max-[600px]:justify-center max-[600px]:flex  max-[600px]:text-center">
             <span
               className="absolute w-[350px] max-md:w-[280px]"
               style={{

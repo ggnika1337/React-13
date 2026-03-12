@@ -55,9 +55,9 @@ function Container({
           setImgThree(1);
         }}
       />
-      <div className="w-full flex-col flex justify-end gap-[87px] self-center justify-self-center items-center max-md:gap-[5px] absolute bottom-10 max-md:overflow-hidden">
+      <div className="w-full flex-col flex justify-end gap-[20px] self-center justify-self-center items-center max-md:gap-[5px] absolute bottom-3 max-md:overflow-hidden">
         <div className="flex justify-between w-full max-w-[1050px] items-center relative max-md:flex-col h-full justify-end">
-          <div className="relative flex w-full justify-center h-full max-md:px-[clamp(0px,22vw,200px)]">
+          <div className="relative flex w-full justify-center h-full px-[70px] max-md:px-[clamp(10px,34vw,250px)]">
             <div className="relative">
               <img src={PlanetImg} className={`w-[${PlanetWidth}] z-2 `} />
               <div className="w-full h-full absolute top-0 flex justify-end">
