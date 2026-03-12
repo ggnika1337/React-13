@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import Categories from "../../__atoms/Categories/Categories";
-import Burger from "../../../assets/Images/Other/Burger.png";
 import BurgerMenu from "../../__organisms/Burger/BurgerMenu";
 import Transfers from "../../__atoms/Transfers/Transfers";
 
@@ -20,8 +19,10 @@ function Bar({
   OnClickThree,
 }) {
   const [burgerOpacity, setBurgerOpacity] = useState(1);
+  const [burgerMiddleOpacity, setBurgerMiddleOpacity] = useState(1);
   const [door, setDoor] = useState(false);
   const [barOpacity, setBarOpacity] = useState(1);
+  const [burgerRotate, setBurgerRotate] = useState(false);
   return (
     <>
       <div className="w-full border-b border-b-[rgba(255,255,255,0.2)] max-[600px]:h-[68px] z-30 fixed">
@@ -40,24 +41,48 @@ function Bar({
             UranusClick={UranusClick}
             NeptuneClick={NeptuneClick}
           />
-          <img
-            src={Burger}
-            className="absolute right-[24px] z-50 hidden max-[600px]:flex"
+          <div
             style={{
               opacity: burgerOpacity,
             }}
             onClick={() => {
               if (door === false) {
                 setDoor(true);
-                setBurgerOpacity(0.2);
+                setBurgerOpacity(0.4);
+                setBurgerMiddleOpacity(false);
                 setBarOpacity(0);
+                setBurgerRotate(true);
               } else {
                 setDoor(false);
                 setBurgerOpacity(1);
+                setBurgerMiddleOpacity(true);
                 setBarOpacity(1);
+                setBurgerRotate(false);
               }
             }}
-          />
+            className="flex flex-col gap-[4px] absolute right-[24px] z-50 hidden max-[600px]:flex"
+          >
+            <div
+              style={{
+                transform: burgerRotate ? "rotate(45deg)" : "rotate(0deg)",
+              }}
+              className="w-[24px] h-[3px] bg-white"
+            ></div>
+            <div
+              style={{
+                transform: burgerRotate ? "rotate(-45deg)" : "rotate(0deg)",
+                bottom: burgerRotate ? "7px" : "0px",
+                position: burgerRotate ? "absolute" : "relative",
+              }}
+              className="w-[24px] h-[3px] bg-white"
+            ></div>
+            <div
+              style={{
+                opacity: burgerMiddleOpacity ? "1" : "0",
+              }}
+              className="w-[24px] h-[3px] bg-white"
+            ></div>
+          </div>
           <div
             style={{
               opacity: barOpacity,
